@@ -16,4 +16,5 @@ jobs:
         working-directory: RestWebService
         run: |
           export SHELL=/bin/bash
+          chmod +x gradlew 
           ./gradlew build
