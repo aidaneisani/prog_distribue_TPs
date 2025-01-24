@@ -12,10 +12,9 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - name: Make gradlew executable
-          run: chmod +x RestWebService/gradlew
       - name: Build and test
         working-directory: RestWebService
         run: |
+          chmod +x gradlew
           export SHELL=/bin/bash
-          ./gradlew build
+          bash gradlew build
