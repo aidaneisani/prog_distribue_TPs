@@ -12,11 +12,8 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - name: Convert gradlew to Unix format
-          run: dos2unix RestWebService/gradlew
       - name: Build and test
         working-directory: RestWebService
         run: |
-          chmod +x gradlew
           export SHELL=/bin/bash
-          bash gradlew build
+          ./gradlew build
